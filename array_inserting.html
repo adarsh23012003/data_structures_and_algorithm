@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array inserting data core js</title>
+  </head>
+  <body>
+    <script>
+      let data = [10, 50, 40, 3, 7, 9, 25];
+      let newElement = 60;
+      let position = 2;
+      function dataInserting() {
+        for (let i = data.length - 1; i >= 0; i--) {
+          const element = data[i];
+          if (position >= i) {
+            data[i + 1] = data[i];
+            if (i == position) {
+              data[i] = newElement;
+              console.log(data);
+            }
+          }
+        }
+      }
+      dataInserting();
+    </script>
+  </body>
+</html>
