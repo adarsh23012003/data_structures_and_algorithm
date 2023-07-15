@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search element in array</title>
+  </head>
+  <body>
+    <input
+      type="number"
+      id="searchElement"
+      placeholder="Enter search element"
+    />
+    <button onclick="searchElement()">Search Element</button>
+    <script>
+      function searchElement() {
+        const data = [51, 25, 84, 78, 63, 15, 54, 13];
+        // data.splice(element,1)                   //default function for delete in array element
+        const element = parseInt(
+          document.getElementById("searchElement").value
+        );
+        for (let i = 0; i < data.length; i++) {
+          if (data[i] === element) {
+            // console.log(data.indexOf(element))       //default function for array/string ka index pata karne ke liya
+            console.log(i);
+            break;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
