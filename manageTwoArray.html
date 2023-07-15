@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Two in Array</title>
+  </head>
+  <body>
+    <script>
+      let arrayFirst = [2, 8, 15, 45, 48, 47, 65];
+      let arraySecond = [7, 89, 87, 45, 21, 15];
+      let arrayThird = [];
+      //  let arrayThird = [...arrayFirst,...arraySecond]       //  default function ( spread operator )
+      for (let i = 0; i < arrayFirst.length; i++) {
+        arrayThird[i] = arrayFirst[i];
+      }
+      for (let i = 0; i < arraySecond.length; i++) {
+        arrayThird[arrayThird.length + i] = arraySecond[i];
+      }
+      console.log(arrayThird);
+    </script>
+  </body>
+</html>
