@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>defaultParameter</title>
+  </head>
+  <body>
+    <script>
+      function sum(a, b) {
+        return a + b;
+      }
+      console.log(sum(5, 5)); // Answer is 10
+      console.log(sum(5)); // Answer is NaN
+      //  *********** than use to default function ************************
+      function defaultSum(a, b = 10) {
+        return a + b;
+      }
+      console.log(defaultSum(5)); // Answer is 15
+      console.log(defaultSum(5, 50)); // Answer is 55
+
+      function test(a, b = test()) {
+        return a + b;
+      }
+      console.log(test(4)); // Answer is Maximum call stack size exceeded
+    </script>
+  </body>
+</html>
