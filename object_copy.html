@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ********************* This ia a shallow copy *************************
+      let object1 = {
+        name: "Adarsh",
+        age: 23,
+      };
+
+      //   let object2 = object1; //This copy is reference(memory location)
+      //   let object2 = Object.assign({}, object1); //Assign value
+      let object2 = { ...object1 }; //Assign value
+      object2.name = "pavan";
+      console.log(object1);
+
+      // ********************* This ia a deep copy *************************
+      let object = {
+        name: "Adarsh",
+        age: 23,
+        friend: {
+          name: "varunraje",
+        },
+      };
+      const user = JSON.parse(JSON.stringify(object));
+    </script>
+  </body>
+</html>
