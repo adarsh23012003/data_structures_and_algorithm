@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack in javascript</title>
+  </head>
+  <body>
+    <script>
+      let data = [];
+      // Array in data pushing using core js
+
+      function arrayInPush(params) {
+        data[data.length] = params;
+      }
+      arrayInPush(10);
+      arrayInPush(15);
+      console.log(data);
+      //   Array data push default function
+      data.push(56);
+      data.push(45);
+      data.push(14);
+      console.log(data);
+
+      //   Array in data pop using core js
+      function arrayInPop() {
+        data.length = data.length - 1;
+      }
+      arrayInPop();
+      arrayInPop();
+      console.log(data);
+      //   Array data pop default function
+      data.pop();
+      data.pop();
+      console.log(data);
+    </script>
+  </body>
+</html>
