@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Short element in data</title>
+  </head>
+  <body>
+    <script>
+      let data = [5, 8, 51, 60, 40, 75, 10, 50, 30];
+      console.log(data);
+
+      //   console.log(data.sort()); // default function
+
+      // using core js
+
+      for (let i = 0; i < data.length; i++) {
+        for (let j = 0; j < data.length; j++) {
+          if (data[j] > data[j + 1]) {
+            let tempVariable = data[j];
+            data[j] = data[j + 1];
+            data[j + 1] = tempVariable;
+          }
+        }
+      }
+      console.log(data);
+    </script>
+  </body>
+</html>
