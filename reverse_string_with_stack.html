@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse string with stack</title>
+  </head>
+  <body>
+    <script>
+      let string = "apple";
+      // function reverseString(params) {
+      //   const reverseElement = [];
+      //   const spreadElement = params.split("");
+
+      //   for (let i = spreadElement.length - 1; i >= 0; i--) {
+      //     reverseElement.push(spreadElement[i]);
+      //   }
+      //   return reverseElement.join();
+      // }
+
+      // ************ New way *********************
+      const reverseString = (params) => {
+        const spreadElement = params.split("");
+        return spreadElement.reverse().join();
+      };
+      console.log(reverseString(string));
+    </script>
+  </body>
+</html>
