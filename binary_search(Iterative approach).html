@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binary search with Iterative approach</title>
+  </head>
+  <body>
+    <script>
+      alert("Binary search only use for ascending order in array");
+      let data = [5, 10, 25, 30, 40, 50]; //Binary search only use for ascending order in array
+      let position = undefined;
+
+      function searchElement(findElement) {
+        let midValue = Math.floor(data.length / 2);
+        if (data.length) {
+          for (let i = 0; i < data.length; i++) {
+            if (data[midValue] === findElement) {
+              position = midValue;
+              break;
+            } else if (data[midValue] < findElement) {
+              midValue++;
+            } else {
+              midValue--;
+            }
+          }
+        }
+        console.log(position);
+        return;
+      }
+
+      searchElement(25);
+    </script>
+  </body>
+</html>
