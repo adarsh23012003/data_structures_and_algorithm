@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let abc = ["a", "e", "i", "o", "u"];
+      let data = "apple";
+      let count = 0;
+
+      // ***************** First method *********************
+      // for (let i = 0; i < abc.length; i++) {
+      //   for (let j = 0; j < data.length; j++) {
+      //     if (abc[i] == data[j]) {
+      //       count++;
+      //     }
+      //   }
+      // }
+      // const noOfConsonant = data.replaceAll(" ", "").length - count;
+      // console.log(noOfConsonant);
+
+      // ****************** Second method ********************
+
+      function name(string) {
+        for (let i = 0; i < string.length; i++) {
+          if (!abc.includes(string[i])) {
+            count++;
+          }
+        }
+      }
+      name(data);
+      console.log(count);
+    </script>
+  </body>
+</html>
