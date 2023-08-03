@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>In this project creating DOM element and append class attribute</h1>
+    <script>
+      function createCard() {
+        let element = document.createElement("div");
+        const appendElement = document.body.appendChild(element);
+        let attribute = document.createAttribute("class");
+        attribute.value = "card";
+        const setAttribute = appendElement.setAttributeNode(attribute);
+        return element;
+      }
+
+      // sample usage (do not modify)
+      console.log(createCard());
+    </script>
+  </body>
+</html>
