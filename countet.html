@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Counter</title>
+    <script>
+      let count = 0;
+      window.onload = function what() {
+        document.getElementById("count").innerHTML = count;
+      };
+      function dic() {
+        count--;
+        document.getElementById("count").innerHTML = count;
+      }
+      function inc() {
+        count++;
+        document.getElementById("count").innerHTML = count;
+      }
+    </script>
+    <style></style>
+  </head>
+  <body>
+    <h1 id="count">0</h1>
+    <button onclick="dic()">-</button>
+    <button onclick="inc()">+</button>
+  </body>
+</html>
