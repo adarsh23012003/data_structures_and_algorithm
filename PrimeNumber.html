@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime number</title>
+    <script>
+      let input = prompt("Enter numbers");
+      const data = [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+      ];
+
+      function primNumber(array) {
+        let newData = [];
+        let flag = 0;
+        for (let i = 0; i < array.length; i++) {
+          for (let j = 2; j < array[i]; j++) {
+            if (array[i] % j == 0) {
+              flag = 1;
+              break;
+            }
+            if (flag == 0) {
+              newData.push(array[i]);
+            }
+            flag = 0;
+          }
+        }
+        let data = new Set(newData);
+        let sum = 0;
+
+        if (array.includes(2)) {
+          sum = 2;
+        }
+        data.forEach((ele) => {
+          sum = sum + ele;
+        });
+        return {
+          TotalSumIs: sum,
+          Array: data,
+        };
+      }
+
+      console.log(primNumber(data));
+    </script>
+  </head>
+  <body></body>
+</html>
